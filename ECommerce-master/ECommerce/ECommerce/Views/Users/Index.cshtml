@@ -1,0 +1,87 @@
+﻿@model IEnumerable<ECommerce.Models.Users>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Basic Info
+
+        </th>
+
+        <th>
+            Others Info
+
+        </th>
+        <th>
+            Address
+        </th>
+        <th>Activity</th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+
+            <td>
+                Name: @Html.DisplayFor(modelItem => item.Name)<br />
+
+                Contact: @Html.DisplayFor(modelItem => item.Contact)<br />
+
+                Email: @Html.DisplayFor(modelItem => item.Email)<br />
+
+                Gender: @if (item.Gender == true)
+                {
+                    @Html.Raw("Male")
+                }
+                else
+                {
+                    @Html.Raw("Female")
+                }
+            </td>
+            <td>
+                JoinDate: @Html.DisplayFor(modelItem => item.JoinDate)<br />
+                Ip: @Html.DisplayFor(modelItem => item.Ip)<br />
+                DateOfBirth:@Html.DisplayFor(modelItem => item.DateOfBirth)<br/>
+                @if (item.UserVerifieds.Count <= 0)
+                {
+                    @Html.Raw("Not Verified")
+                }
+                else 
+                {
+                     @Html.Raw("Verified")
+                }
+                 @if (item.AdminUser != null)
+                 {
+                    @Html.Raw("Administrator")
+                 }
+            </td>
+            <td>
+                <address>
+                    @Html.DisplayFor(modelItem => item.City.NAME)<br/>
+                    @Html.DisplayFor(modelItem => item.Address)
+                </address>
+            </td>
+            <td>
+                Comments:@item.Comments.Count()<br/>
+                Like:@item.ProductLikes.Count()<br/>
+                Ratting:@item.ProductRatings.Count()<br/>
+                Prodcut:@item.Products.Count()
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }
+
+</table>

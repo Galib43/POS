@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - MD.GALIB HOSSAIN</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+              
+            </div>
+            <!-- Menu bar -->
+
+
+            <div class="container-fluid">
+
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="active">@Html.ActionLink("Home", "Index", "Home")</li>
+
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Refernces<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Country", "Index", "Country")</li>
+                                <li>@Html.ActionLink("City", "Index", "City")</li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Users <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Users", "Index", "Users")</li>
+                                <li>@Html.ActionLink("Verified", "Index", "UserVerified")</li>
+                                <li>@Html.ActionLink("Admin", "Index", "AdminUser")</li>
+                                <li>@Html.ActionLink("LogIn History", "Index", "LogInHistory")</li>
+
+                            </ul>
+                        </li>
+
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Product <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Category", "Index", "Category")</li>
+                                <li>@Html.ActionLink("Brand", "Index", "Brand")</li>
+                                <li>@Html.ActionLink("Condition", "Index", "Condition")</li>
+                                <li>@Html.ActionLink("Close Type", "Index", "CloseType")</li>
+                                <li>@Html.ActionLink("Prodcut", "Index", "Prodcut")</li>
+                                <li>@Html.ActionLink("Images", "Index", "ProductImage")</li>
+                                <li>@Html.ActionLink("ProductVerified", "Index", "ProductVerified")</li>
+                                <li>@Html.ActionLink("Comments", "Index", "Comment")</li>
+                                <li>@Html.ActionLink("Like", "Index", "ProductLike")</li>
+                                <li>@Html.ActionLink("Rating", "Index", "ProductRatting")</li>
+                                <li>@Html.ActionLink("Closed", "Index", "ProdcutClose")</li>
+                                <li>@Html.ActionLink("Archive", "Index", "Archeive")</li>
+                            </ul>
+                        </li>
+
+                        <li>@Html.ActionLink("Live Message", "Index", "Message")</li>
+                    </ul>
+                    @Html.Partial("_LoginPartial")
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+            <!--Menu end-->
+            
+
+</div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Md.GALIB HOSSAIN</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

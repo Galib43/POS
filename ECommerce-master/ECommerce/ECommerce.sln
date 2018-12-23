@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerce", "ECommerce\ECommerce.csproj", "{D745AEC0-76C6-4CDF-90CE-512C14B9ACF7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{0E9EF237-EA98-4656-B4E1-0B9E450B148D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository", "Repository\Repository.csproj", "{A8F87D1F-959A-45C2-9888-62907DE6BC86}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D745AEC0-76C6-4CDF-90CE-512C14B9ACF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D745AEC0-76C6-4CDF-90CE-512C14B9ACF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D745AEC0-76C6-4CDF-90CE-512C14B9ACF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D745AEC0-76C6-4CDF-90CE-512C14B9ACF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E9EF237-EA98-4656-B4E1-0B9E450B148D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E9EF237-EA98-4656-B4E1-0B9E450B148D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E9EF237-EA98-4656-B4E1-0B9E450B148D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E9EF237-EA98-4656-B4E1-0B9E450B148D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8F87D1F-959A-45C2-9888-62907DE6BC86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8F87D1F-959A-45C2-9888-62907DE6BC86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8F87D1F-959A-45C2-9888-62907DE6BC86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8F87D1F-959A-45C2-9888-62907DE6BC86}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

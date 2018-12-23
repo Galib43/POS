@@ -1,0 +1,92 @@
+﻿@model IEnumerable<ECommerce.Models.Product>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Name
+        </th>
+        <th>
+            Description
+        </th>
+        <th>
+            Others
+        </th>
+        <th>Images</th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                Brand:  @Html.DisplayFor(modelItem => item.Brand.Name)
+
+                Category:  @Html.DisplayFor(modelItem => item.Category.Name)
+
+                Condition:   @Html.DisplayFor(modelItem => item.Condition.Name)
+
+                Users:  @Html.DisplayFor(modelItem => item.Users.Name)
+
+               Product Name: @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                Description: @Html.DisplayFor(modelItem => item.Description)
+
+                RegularPrice: @Html.DisplayFor(modelItem => item.RegularPrice)
+
+                OfferPrice:@Html.DisplayFor(modelItem => item.OfferPrice)
+
+                Negotiable:   @if (item.Negotiable == true)
+                {
+                    @Html.Raw("No")
+                }
+                else
+                {
+                    @Html.Raw("Yes")
+                }
+            </td>
+            <td>
+                Links: @Html.DisplayFor(modelItem => item.Links)<br />
+
+                Video: @Html.DisplayFor(modelItem => item.Video)<br />
+
+                CreateDate: @Html.DisplayFor(modelItem => item.CreateDate)<br />
+
+                Ip: @Html.DisplayFor(modelItem => item.Ip)<br />
+            </td>
+
+
+            <td>
+            <td>
+                @{
+        if (item.ProductImages.Count > 0)
+        {
+            var pi = item.ProductImages.First();
+            @Html.Raw("<a href=\"../ProductImage?Prodcut=" + item.Id.ToString() + "\"><img src=\"../Uploads/UsersImages/" + pi.Id.ToString() + "_" + pi.Image + "\" title=\"Total : " + item.ProductImages.Count + " Images\" height=\"100\"/></a>");
+        }
+        else
+        {
+            @Html.Raw("<img src = \"../Uploads/UsersImages/3_default-image_600.png\" height=\"100\"/>")
+        }
+                }
+            </td> 
+
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }
+
+</table>

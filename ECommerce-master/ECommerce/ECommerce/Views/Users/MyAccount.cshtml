@@ -1,0 +1,11 @@
+﻿
+@{
+    ViewBag.Title = "MyAccount";
+}
+
+<h2>MyAccount</h2>
+
+<div>
+    My Product:<a href="../Prodcut?Users=@Session["id"]">@(new ECommerce.Models.ApplicationDbContext().Products.Where(p => p.UserId ==1).Count())</a>
+</div>
+
